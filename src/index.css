@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+/* 1. TELL TAILWIND V4 ABOUT OUR CUSTOM COLORS */
+@theme {
+  --color-brand-bg: var(--bg-base);
+  --color-brand-panel: var(--bg-panel);
+  --color-brand-border: var(--border-color);
+  --color-brand-text: var(--text-primary);
+  --color-brand-muted: var(--text-secondary);
+  --color-brand-accent: var(--accent-base);
+  --color-brand-hover: var(--accent-hover);
+  --color-brand-soft: var(--accent-soft);
+}
+
+/* =========================================
+   THEME 1: CYBER (Default Dark)
+   ========================================= */
+:root, [data-theme="cyber"] {
+  --bg-base: #050505;
+  --bg-panel: #0f0f0f;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8; 
+  --accent-base: #10b981; 
+  --accent-hover: #34d399; 
+  --accent-soft: rgba(16, 185, 129, 0.15);
+  --pdf-filter: invert(0.05) grayscale(0.2); 
+  --pdf-bg: #111111;
+}
+
+/* =========================================
+   THEME 2: LIGHT (Clean Corporate)
+   ========================================= */
+[data-theme="light"] {
+  --bg-base: #f8fafc; 
+  --bg-panel: #ffffff;
+  --border-color: #e2e8f0; 
+  --text-primary: #0f172a; 
+  --text-secondary: #64748b; 
+  --accent-base: #2563eb; 
+  --accent-hover: #3b82f6; 
+  --accent-soft: rgba(37, 99, 235, 0.15);
+  --pdf-filter: none; 
+  --pdf-bg: #e2e8f0;
+}
+
+/* =========================================
+   THEME 3: MIDNIGHT (Deep Ocean / Dev)
+   ========================================= */
+[data-theme="midnight"] {
+  --bg-base: #020617; 
+  --bg-panel: #0f172a; 
+  --border-color: #1e293b; 
+  --text-primary: #f8fafc; 
+  --text-secondary: #94a3b8; 
+  --accent-base: #0ea5e9; 
+  --accent-hover: #38bdf8; 
+  --accent-soft: rgba(14, 165, 233, 0.15);
+  --pdf-filter: invert(0.05) grayscale(0.2);
+  --pdf-bg: #0f172a;
+}
+
+/* =========================================
+   THEME 4: AMBER (Retro Terminal)
+   ========================================= */
+[data-theme="amber"] {
+  --bg-base: #1c1917; 
+  --bg-panel: #292524; 
+  --border-color: #44403c; 
+  --text-primary: #fafaf9; 
+  --text-secondary: #a8a29e; 
+  --accent-base: #f59e0b; 
+  --accent-hover: #fbbf24; 
+  --accent-soft: rgba(245, 158, 11, 0.15);
+  --pdf-filter: sepia(0.4) invert(0.05); 
+  --pdf-bg: #292524;
+}
+
+/* =========================================
+   GLOBAL STYLES & SCROLLBAR
+   ========================================= */
+body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-scrollbar::-webkit-scrollbar { width: 6px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.custom-scrollbar::-webkit-scrollbar-thumb { 
+  background: var(--border-color); 
+  border-radius: 10px; 
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover { 
+  background: var(--accent-base); 
+}
+
+@media (min-width: 1024px) {
+  .custom-scrollbar::-webkit-scrollbar { width: 8px; }
+  .custom-scrollbar::-webkit-scrollbar-thumb { 
+    border: 2px solid var(--bg-panel); 
+  }
+}
