@@ -2,6 +2,10 @@
 
 **Redacto** is an intelligent, dual-model AI system designed to automatically detect and redact sensitive Personally Identifiable Information (PII) from unstructured legal documents and scanned PDFs. It prioritizes a high recall rate and strict privacy compliance while preserving the contextual integrity of the document.
 
+Run the App: https://redacto-ui.vercel.app/
+
+Read Blog: https://medium.com/@shaikhahmedfaraz64/redacto-how-i-build-a-context-aware-redaction-engine-using-gliner-and-bart-fab9fae4fa89
+
 ![Home Page](assets/homepage.png)
 
 ![Home Page](assets/engine.png)
