@@ -72,7 +72,7 @@ export default function App() {
     try {
       const response = await axios.post(`${API_BASE}/analyze-document`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
-        timeout: 600000 
+        // timeout: 600000 
       });
       if (response.data) {
         setAuditLog(response.data.audit_log.map(item => ({ ...item, approved: true })));
